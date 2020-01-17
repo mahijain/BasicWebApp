@@ -5,4 +5,4 @@ script: mvn clean verify
 deploy:
   provider: heroku
   api_key: ...
-  app: sei-coursework-1
+  app: sei-coursework-1 
