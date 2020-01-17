@@ -28,6 +28,6 @@ public class QueryProcessorTest {
     
     @Test
     public void test() throws Exception {
-        assertThat(queryProcessor.process("test"), containsString("yes"));
+        assertThat(queryProcessor.process("hi"), containsString("yes"));
     }
 }
