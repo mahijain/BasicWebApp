@@ -4,7 +4,9 @@ jdk:
 script: mvn clean verify
 deploy:
   provider: heroku
-  api_key: 54917993-96d2-4ab5-a4e6-cc307bd108fb
+  edge: true
+  api_key:
+    secure: pdPoZE9b2Zq83ERGM/BuI++O+kdipe2OUVy9RErRWVX6bX23PTfL86/x1Hy5R7RD3XA1vctTY1lRnLcY//L+25UygqHu8hNK/9Llmq/vNbrly+xbDs7ZgwKNi0IzNCDtWIte3shDuyrhLhWJj82IWZzU3DYc836lLSdOVzd+UsuH+ctEnOYsB4hAinkTCOSnfXgd563SZdSslyZBWSppWHFlnNSdRcXiQhC7/viQDWWGmkCFHh65gWHs1eaAKHUm8uk7BbcksqzwmFygMc0N5VFKDJIj/p/TV+IcoKNOo/OXqZwa24zUA/lQ/+yv8whDoq14HECp8U2HyCerq0wA24gJgsAoJsjFp4EuawY5j0siTCp78w4ahuP/pjSwNCW/fQArOqyvpN67jp1QDVPPJOieQMsN4F5I1w9zIiIrNQTDe7gGm5R3ASSpGXMJ1Dp2C2pYAGqRd9jhjieW0ghAeBvxydXEYS1gBRZcZIm/ElTTPNsVEfuyYvqw2OEh2GdTqYH7f4QIYoJgl1Z4hmKPRv8K4ikmcNMG6f5ZAevyjohQNUmeT+dOFqxB1oWOqeknmdAV99C5P7lrZ3O3VPDQXUFPHaKkU2vHMoGUPJvBNuZQKSGt8tPXmprGqOxmHFQJjcgAjft7Sm0kdbvluA/Fv/tqKTiV8Idn95hWywy6P6I=
   app: sei-coursework-1
   on:
     repo: mahijain/BasicWebApp
