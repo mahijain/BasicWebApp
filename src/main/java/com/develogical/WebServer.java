@@ -50,8 +50,7 @@ public class WebServer {
   private Integer portNumberToUse() {
     return System.getenv("PORT") != null ? Integer.valueOf(System.getenv("PORT")) : 8080;
   }
-
-  // test
+  
   public static void main(String[] args) throws Exception {
     new WebServer();
   }
