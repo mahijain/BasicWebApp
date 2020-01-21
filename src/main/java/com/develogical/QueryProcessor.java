@@ -62,7 +62,32 @@ public class QueryProcessor {
             }
             return "" + current;
         }
+        else if (query.toLowerCase().contains("prime")) {
+            String[] arr = query.split(":");
+            String[] nums = arr[1].split(", ");
+            List<Integer> parsedNums = new ArrayList<>();
+            for ( String num : nums) {
+            	if(isPrime(Integer.parseInt(num.trim())))
+                parsedNums.add(Integer.parseInt(num.trim()));
+            }
+           return "" + parsedNums;
+    
+        }
         return "";
 
     }
+    
+    static boolean isPrime(int n) 
+    { 
+        // Corner case 
+        if (n <= 1) 
+            return false; 
+       
+        // Check from 2 to n-1 
+        for (int i = 2; i < n; i++) 
+            if (n % i == 0) 
+                return false; 
+       
+        return true; 
+    } 
 }
