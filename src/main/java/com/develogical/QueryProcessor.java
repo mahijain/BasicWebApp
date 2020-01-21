@@ -30,7 +30,10 @@ public class QueryProcessor {
             return "" + (Integer.parseInt(nums[0].trim()) + Integer.parseInt(nums[1].trim()));
         } else if (query.toLowerCase().contains("James Bond")){
             return "Sean Connery";
-        }
+        } else if(query.toLowerCase().contains(("multiplied by "))){
+            String[] arr = query.split("is");
+            String[] nums = arr[1].split("multiplied by ");
+            return "" + (Integer.parseInt(nums[0].trim()) * Integer.parseInt(nums[1].trim()));
         return "";
 
     }
