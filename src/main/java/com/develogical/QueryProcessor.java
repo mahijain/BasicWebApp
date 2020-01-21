@@ -21,10 +21,10 @@ public class QueryProcessor {
             return "MTM";
         else if (query.toLowerCase().contains("is the largest")) {
             String[] arr = query.split(":");
-            String[] nums = arr[1].split(" ");
+            String[] nums = arr[1].split(",");
             List<Integer> parsedNums = new ArrayList<>();
             for ( String num : nums) {
-                parsedNums.add(Integer.parseInt(num));
+                parsedNums.add(Integer.parseInt(num.trim()));
             }
             Collections.sort(parsedNums);
             return "" + parsedNums.get(parsedNums.size() - 1 );
