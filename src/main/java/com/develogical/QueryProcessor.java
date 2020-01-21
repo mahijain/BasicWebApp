@@ -25,6 +25,9 @@ public class QueryProcessor {
             Collections.sort(parsedNums);
             return "" + parsedNums.get(parsedNums.size() - 1 );
         }
+        else if(query.toLowerCase().contains("Eiffel")) {
+        	return "Paris";
+        }
         return "";
 
     }
