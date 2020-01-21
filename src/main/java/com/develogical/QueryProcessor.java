@@ -10,7 +10,10 @@ public class QueryProcessor {
         }
         else if (query.toLowerCase().contains("hi")) {
             return "yes";
+
         }
+        else if (query.toLowerCase().contains(("name")))
+            return "MTM";
         return "";
     }
 }
