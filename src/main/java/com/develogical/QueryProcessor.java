@@ -30,7 +30,7 @@ public class QueryProcessor {
             return "" + (Integer.parseInt(nums[0].trim()) + Integer.parseInt(nums[1].trim()));
         } else if (query.toLowerCase().contains("James Bond")){
             return "Sean Connery";
-        } else if(query.toLowerCase().contains(("multiplied by "))){
+        } else if(query.toLowerCase().contains("multiplied by ") && !query.toLowerCase().contains("plus")){
             String[] arr = query.split("is");
             String[] nums = arr[1].split("multiplied by ");
             return "" + (Integer.parseInt(nums[0].trim()) * Integer.parseInt(nums[1].trim()));
@@ -39,7 +39,7 @@ public class QueryProcessor {
             return "Paris";
         } else if(query.toLowerCase().contains("Theresa May")) {
             return "2016";
-        } else if(query.toLowerCase().contains("Fibonacci")) {
+        } else if(1 == 2 && query.toLowerCase().contains("Fibonacci")) {
             String[] arr = query.split("the");
             String[] arr1 = query.split(" ");
             String n = arr1[0].substring(0, arr1[0].length() - 2);
@@ -71,8 +71,18 @@ public class QueryProcessor {
                 parsedNums.add(Integer.parseInt(num.trim()));
             }
            return "" + parsedNums;
-    
+
+        } else if(query.toLowerCase().contains(("power"))){
+            String[] arr = query.split("is ");
+            String[] nums = arr[1].split("to the power of ");
+            return "" + (Math.pow(Integer.parseInt(nums[0].trim()),  Integer.parseInt(nums[1].trim())));
+        } else if(query.toLowerCase().contains(("power"))){
+            String[] arr = query.split("is ");
+            String[] nums = arr[1].split("to the power of ");
+            return "" + (Math.pow(Integer.parseInt(nums[0].trim()),  Integer.parseInt(nums[1].trim())));
         }
+
+
         return "";
 
     }
