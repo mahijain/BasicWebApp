@@ -36,7 +36,9 @@ public class QueryProcessor {
             return "" + (Integer.parseInt(nums[0].trim()) * Integer.parseInt(nums[1].trim()));
         }
         else if(query.toLowerCase().contains("Eiffel")) {
-        	return "Paris";
+            return "Paris";
+        } else if(query.toLowerCase().contains("Theresa May")) {
+            return "2016";
         }
         return "";
 
