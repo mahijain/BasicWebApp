@@ -28,6 +28,8 @@ public class QueryProcessor {
             String[] arr = query.split("is");
             String[] nums = arr[1].split("plus");
             return "" + (Integer.parseInt(nums[0].trim()) + Integer.parseInt(nums[1].trim()));
+        } else if (query.toLowerCase().contains("James Bond")){
+            return "Sean Connery";
         }
         return "";
 
