@@ -17,7 +17,7 @@ public class QueryProcessor {
             return "MTM";
         else if (query.toLowerCase().contains("is the largest")) {
             String[] arr = query.split(":");
-            String[] nums = arr[1].split(",");
+            String[] nums = arr[1].split(", ");
             List<Integer> parsedNums = new ArrayList<>();
             for ( String num : nums) {
                 parsedNums.add(Integer.parseInt(num.trim()));
@@ -34,6 +34,10 @@ public class QueryProcessor {
             String[] arr = query.split("is");
             String[] nums = arr[1].split("multiplied by ");
             return "" + (Integer.parseInt(nums[0].trim()) * Integer.parseInt(nums[1].trim()));
+        }
+        else if(query.toLowerCase().contains("Eiffel")) {
+        	return "Paris";
+        }
         return "";
 
     }
