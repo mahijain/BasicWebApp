@@ -35,6 +35,6 @@ public class QueryProcessor {
         	return "Paris";
         }
         return "";
-//push changes
+
     }
 }
