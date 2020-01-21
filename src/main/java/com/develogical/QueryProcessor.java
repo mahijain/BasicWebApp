@@ -39,6 +39,28 @@ public class QueryProcessor {
             return "Paris";
         } else if(query.toLowerCase().contains("Theresa May")) {
             return "2016";
+        } else if(query.toLowerCase().contains("Fibonacci")) {
+            String[] arr = query.split("the");
+            String[] arr1 = query.split(" ");
+            String n = arr1[0].substring(0, arr1[0].length() - 2);
+            int N = Integer.parseInt(n);
+            if (N <= 1) {
+                return "" + N;
+            }
+            if (N == 2) {
+                return "1";
+            }
+
+            int current = 0;
+            int prev1 = 1;
+            int prev2 = 1;
+
+            for (int i = 3; i <= N; i++) {
+                current = prev1 + prev2;
+                prev2 = prev1;
+                prev1 = current;
+            }
+            return "" + current;
         }
         return "";
 
