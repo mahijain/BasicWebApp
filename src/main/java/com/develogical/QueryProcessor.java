@@ -73,8 +73,33 @@ public class QueryProcessor {
            return "" + parsedNums;
     
         }
+        else if (query.toLowerCase().contains("both a square and a cube")) {
+            String[] arr = query.split(":");
+            String[] nums = arr[1].split(", ");
+            List<Integer> parsedNums = new ArrayList<>();
+            for ( String num : nums) {
+            	if(squareAndCube(Integer.parseInt(num.trim())))
+                parsedNums.add(Integer.parseInt(num.trim()));
+            }
+           return "" + parsedNums;
+    
+        }
+        
         return "";
+        
 
+    }
+    
+    static boolean squareAndCube(int n)
+    {
+    	double sq = Math.sqrt(n);
+    	double c= Math.cbrt(n);
+    	
+    	if((sq - Math.floor(sq)) == 0 && (c - Math.floor(c) == 0))
+		return true;
+		else
+		return false;
+    	
     }
     
     static boolean isPrime(int n) 
