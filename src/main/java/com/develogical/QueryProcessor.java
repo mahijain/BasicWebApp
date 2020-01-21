@@ -13,10 +13,6 @@ public class QueryProcessor {
                     "English poet, playwright, and actor, widely regarded as the greatest " +
                     "writer in the English language and the world's pre-eminent dramatist.";
         }
-        else if (query.toLowerCase().contains("hi")) {
-            return "yes";
-
-        }
         else if (query.toLowerCase().contains(("name")))
             return "MTM";
         else if (query.toLowerCase().contains("is the largest")) {
