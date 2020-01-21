@@ -28,6 +28,10 @@ public class QueryProcessor {
             }
             Collections.sort(parsedNums);
             return "" + parsedNums.get(parsedNums.size() - 1 );
+        } else if(query.toLowerCase().contains(("what is "))){
+            String[] arr = query.split("is");
+            String[] nums = arr[1].split("plus");
+            return "" + (Integer.parseInt(nums[0].trim()) + Integer.parseInt(nums[1].trim()));
         }
         return "";
 
