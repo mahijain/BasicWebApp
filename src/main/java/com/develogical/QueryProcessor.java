@@ -1,5 +1,10 @@
 package com.develogical;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+
 public class QueryProcessor {
 
     public String process(String query) {
@@ -14,6 +19,17 @@ public class QueryProcessor {
         }
         else if (query.toLowerCase().contains(("name")))
             return "MTM";
+        else if (query.toLowerCase().contains("is the largest")) {
+            String[] arr = query.split(":");
+            String[] nums = arr[1].split(" ");
+            List<Integer> parsedNums = new ArrayList<>();
+            for ( String num : nums) {
+                parsedNums.add(Integer.parseInt(num));
+            }
+            Collections.sort(parsedNums);
+            return "" + parsedNums.get(parsedNums.size() - 1 );
+        }
         return "";
+
     }
 }
